@@ -129,6 +129,7 @@
                             >
                                 <Socials name="LinkedIn"/>
                                 <Socials name="Email"/>
+                                <Socials name="Github" />
                             </div>
                             <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500 col-span-2 grid grid-cols-4 grid-rows-3 grid-flow-dense gap-[0.5rem] p-[.5rem]" v-motion
                                 :initial="{opacity: 0,y: 50}"

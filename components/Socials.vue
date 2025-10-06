@@ -7,6 +7,8 @@
     const linkTo = () => {
         if(props.name === "LinkedIn") {
             window.open("https://www.linkedin.com/in/nico-pies-688228275/", "_blank")
+        } else if (props.name === "Github") {
+            window.open("https://github.com/Nico09322", "_blank")
         }
 
     }
@@ -19,7 +21,8 @@
         :hovered="{scale:1.05}"
     >
         <Icon v-if="name === 'LinkedIn'" name="mdi:linkedin" class="w-[2.5rem] h-[2.5rem]" />
-        <Icon v-else-if="name === 'Email'" name="material-symbols:mail-rounded" class="w-[2.5rem] h-[2.5rem] mr-[0.5rem]"/>        
+        <Icon v-else-if="name === 'Email'" name="material-symbols:mail-rounded" class="w-[2.5rem] h-[2.5rem] mr-[0.5rem]"/>
+        <Icon v-else-if="name === 'Github'" name="jam:github" class="w-[2.5rem] h-[2.5rem] mr-[0.5rem]"/>          
         <div>{{ name }}</div>
     </div>
 
