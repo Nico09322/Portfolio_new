@@ -137,14 +137,16 @@
                             >
                                 <Skill name="Vue" />
                                 <Skill name="Nuxt" /> 
-                                <Skill name="Strapi" />                                 
+                                <Skill name="Strapi" />      
+                                <Skill name="Supabase" />                                                            
                                 <Skill name="Javascript" />
                                 <Skill name="Tailwind" />      
                                 <Skill name="HTML" />     
                                 <Skill name="CSS" />         
                                 <Skill name="Figma" />                                                                                     
                                 <Skill name="Indesign" />             
-                                <Skill name="Blender" />                                                     
+                                <Skill name="Blender" />     
+                                               
                             </div>
                             <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500 flex flex-row items-center justify-center p-[1rem]" v-motion
                                 :initial="{opacity: 0,y: 50}"

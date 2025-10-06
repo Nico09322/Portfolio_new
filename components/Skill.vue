@@ -21,7 +21,8 @@
         <Icon v-else-if="name === 'Figma'" name="logos:figma" class="w-[1.5rem] h-[1.5rem] mr-[0.5rem]" />          
         <Icon v-else-if="name === 'Indesign'" name="logos:adobe-indesign" class="w-[1.5rem] h-[1.5rem] mr-[0.5rem]" />   
         <Icon v-else-if="name === 'Blender'" name="logos:blender" class="w-[1.5rem] h-[1.5rem] mr-[0.5rem]" />    
-        <Icon v-else-if="name === 'Strapi'" name="logos:strapi-icon" class="w-[1.5rem] h-[1.5rem] mr-[0.5rem]" />                          
+        <Icon v-else-if="name === 'Strapi'" name="logos:strapi-icon" class="w-[1.5rem] h-[1.5rem] mr-[0.5rem]" />    
+        <Icon v-else-if="name === 'Supabase'" name="devicon:supabase" class="w-[1.5rem] h-[1.5rem] mr-[0.5rem]" />                         
         <div>{{ name }}</div>
     </div>
 
