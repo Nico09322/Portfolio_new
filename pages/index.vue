@@ -57,6 +57,15 @@
 
     };
 
+    const childId = ref(null)
+    const childMoreClicked = ref(null)
+
+    const handleEmit = (val) => {
+        childId.value = val.id;
+        childMoreClicked.value = val.moreClicked;
+
+    }
+
 
 </script>
 
@@ -191,7 +200,7 @@
                         </div>
                     </div>
                     <div class="grid grid-cols-3  gap-[1rem] mt-[1rem] w-full h-full grid-flow-dense" v-auto-animate>
-                        <Projekt v-for="project in projects.data" :key="project.id" :project="project"/>
+                        <Projekt v-for="project in projects.data" :key="project.id" :project="project" @moreClicked="handleEmit" :class="(childMoreClicked === true && project.id === childId) ? 'col-span-3 row-span-2' : 'col-span-1 row-span-1' "/>
                                                                                                   
                     </div>
                 </div>
@@ -208,7 +217,7 @@
                             <textarea name="message" placeholder="Nachricht" class="appearance-none outline-none focus:outline-none focus:ring-0 text-white caret-white w-[40.5rem] h-[10rem] bg-white/10 rounded-lg pl-[1rem] pt-[1rem] border border-gray-500 focus:border-sky-500 mr-[0.5rem]" required></textarea>
                         </div>
                         <div class="flex justify-center items-center mt-[0.5rem]">
-                            <button type="submit" class="w-[40.5rem] h-[4rem] text-center hover:bg-sky-500 rounded-lg hover:text-white text-white/30 bg-white/10 cursor-pointer duration-75 select-none">{{ submit }}</button>
+                            <button type="submit" class=" w-[40.5rem] h-[4rem] text-center hover:bg-sky-500 rounded-lg hover:text-white text-white/30 bg-white/10 cursor-pointer duration-75 select-none">{{ submit }}</button>
                         </div>
 
                     </form>
