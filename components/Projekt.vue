@@ -64,7 +64,7 @@
         >
             <div class="text-white mb-[0.5rem]">{{ project.Title }}</div>
             <div class="w-full rounded-lg overflow-hidden"> 
-                <img :src="project.Hero.url" class="w-full h-full object-cover" />
+                <NuxtImg :src="project.Hero.url" class="w-full h-full object-cover" sizes="300px" densities="x1 x2" />
             </div>
             <div class="w-full h-[2rem] flex items-center justify-center group-hover:bg-sky-500 rounded-lg group-hover:text-white text-white/30 bg-white/10 mt-[0.5rem] cursor-pointer duration-75 select-none" @click="sendOpen" v-motion
                 :initial="{scale:1}"
@@ -86,7 +86,7 @@
                     <div class="text-white text-[2rem]">{{ project.Title }}</div>
                     <div class="bg-white/20 w-2/5 text-center rounded-lg text-white mb-[0.5rem] cursor-pointer select-none"><a :href="project.Link" target="_blank">{{ project.Link }}</a></div>
                     <div class="flex flex-row"><Skill v-for="skill in skillArray" :name="skill" class="p-[0.5rem] mr-[0.5rem] mb-[0.5rem]" /></div>
-                    <div class="grid grid-cols-3  w-full h-full gap-[0.5rem]"><img v-for="(pic, index) in project.Pictures" :key="index" :src="pic.url" class="rounded-lg"/></div>
+                    <div class="grid grid-cols-3  w-full h-full gap-[0.5rem]"><NuxtImg v-for="(pic, index) in project.Pictures" :key="index" :src="pic.url" class="rounded-lg" sizes="200px" densities="x1 x2"/></div>
                     <div class="text-white mt-[0.5rem]">{{ project.Description }}</div>
                 </div>
             </div>

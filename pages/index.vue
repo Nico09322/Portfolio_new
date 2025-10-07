@@ -29,6 +29,7 @@
 
     const submit = ref("senden");
 
+
     const sendEmail = (e) => {
 
         console.log(form.value)
@@ -183,7 +184,7 @@
                                 :initial="{opacity: 0,y: 50}"
                                 :visible="{opacity: 1, y:0, transition:{delay: 200}}"
                             >
-                                <img :src="foto" class="rounded-lg h-[22rem] w-[17rem] border border-gray-500" />
+                                <img :src="foto" class="rounded-lg h-[22rem] w-[17rem] border border-gray-500" densities="x1 x2" sizes="17rem"/>
                             </div>
                         </div>
                     </div>
@@ -200,12 +201,12 @@
                         </div>
                     </div>
                     <div class="grid grid-cols-3  gap-[1rem] mt-[1rem] w-full h-full grid-flow-dense" v-auto-animate>
-                        <Projekt v-for="project in projects.data" :key="project.id" :project="project" @moreClicked="handleEmit" :class="(childMoreClicked === true && project.id === childId) ? 'col-span-3 row-span-2' : 'col-span-1 row-span-1' "/>
+                        <LazyProjekt v-for="project in projects.data" :key="project.id" :project="project" @moreClicked="handleEmit" :class="(childMoreClicked && project.id === childId) ? 'col-span-3 row-span-2' : 'col-span-1 row-span-1' "/>
                                                                                                   
                     </div>
                 </div>
             </section>
-            <section ref="scrollKontakt" class="h-screen flex flex-col justify-center items-center w-full">
+            <section ref="scrollKontakt" class="h-screen flex flex-col justify-center items-center w-full mt-[10rem] mb-[10rem]">
                 <div class="text-white text-[3rem] mb-[3rem]">Kontakt</div>
                 <div class="flex flex-col w-1/2 mb-[3rem] justify-center items-center">
                     <form ref="form" @submit.prevent="sendEmail">
