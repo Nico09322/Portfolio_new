@@ -30,8 +30,8 @@
 </script>
 
 <template>
-    <div class="fixed w-full flex justify-center z-10 pointer-events-none font-custom">
-        <div class="mt-6 w-1/2 h-16 bg-white/10 backdrop-blur rounded-lg pointer-events-auto border border-gray-500 flex justify-center items-center flex-row pl-4 pr-4">
+    <div class="fixed w-full flex justify-center z-10 pointer-events-none font-custom invisible sm:visible">
+        <div class="mt-6 w-2/3 h-16 bg-white/10 backdrop-blur rounded-lg pointer-events-auto border border-gray-500 flex justify-center items-center flex-row pl-4 pr-4">
 
             <div class="flex flex-row items-center space-x-0.5 group cursor-pointer">
                 <div class="w-12 h-12 rounded-full bg-green-500 flex justify-center items-center transition-transform duration-300 ease-out group-hover:translate-x-[4rem] group-hover:w-4 group-hover:h-4" ></div>

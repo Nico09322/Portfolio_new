@@ -23,7 +23,7 @@
         <Icon v-else-if="name === 'Blender'" name="logos:blender" class="w-[1.5rem] h-[1.5rem] mr-[0.5rem]" />    
         <Icon v-else-if="name === 'Strapi'" name="logos:strapi-icon" class="w-[1.5rem] h-[1.5rem] mr-[0.5rem]" />    
         <Icon v-else-if="name === 'Supabase'" name="devicon:supabase" class="w-[1.5rem] h-[1.5rem] mr-[0.5rem]" />                         
-        <div>{{ name }}</div>
+        <div class="hidden sm:block">{{ name }}</div>
     </div>
 
 </template>

@@ -84,25 +84,25 @@
             <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-950 pointer-events-none"></div>
             <section ref="scrollHome" class="w-full h-full flex justify-center items-center mt-[20rem]">
                 <div class="flex flex-col items-start w-3/5">
-                    <TextType class="text-white text-[6rem] relative" 
+                    <TextType class="text-white text-[3.5rem] relative sm:text-[6rem]" 
                         :text="['Hi,', 'Hallo,', 'Hello,', 'Bonjour,', 'Ciao,', 'こんにちは,' ,'Γειά σου,' ,'Hej,']"
                         :typing-speed="100"
                         :pause-duration="1500"
                         :show-cursor="true"
                     />
                     <div class="flex flex-row">
-                        <div class="text-[3rem] text-white" v-motion
+                        <div class="text-[2rem] text-white sm:text-[3rem]" v-motion
                             :initial="{scale:1.1, opacity:0}"
                             :visible="{scale:1, opacity:1}"
                             :delay="200"
                         >ich bin</div>
-                        <h1 class="text-[3rem] text-sky-600 font-bold ml-6" v-motion
+                        <h1 class="text-[2rem] text-sky-600 font-bold ml-6 sm:text-[3rem]" v-motion
                             :initial="{scale:1.1, opacity:0}"
                             :visible="{scale:1, opacity:1}"
                             :delay="250"
                         >NICO</h1>
                     </div>
-                    <div class="text-neutral-400" v-motion
+                    <div class="text-neutral-400 text-[0.85rem] sm:text-[1rem]" v-motion
                         :initial="{scale:1.1, opacity:0}"
                         :visible="{scale:1, opacity:1}"
                         :delay="300"
@@ -111,7 +111,7 @@
 
             </section>
             <div class="inset-0 flex justify-center items-center">
-                <div class=" mt-[20rem] relative text-neutral-400/30 flex flex-col items-center -space-y-3"><Icon class="absolute"  name="line-md:arrow-down" size="1.5rem" v-motion
+                <div class=" mt-[20rem] relative text-neutral-400/30 flex flex-col items-center -space-y-3 invisible sm:visible"><Icon class="absolute"  name="line-md:arrow-down" size="1.5rem" v-motion
                         :initial="{scale:0.8}"    
                         :enter="{scale:1.1, transition: {repeat: Infinity, repeatType: 'loop', repeatDelay: 1000, duration: 300}}"
                     />
@@ -122,7 +122,7 @@
                 </div>
             </div>
             <section ref="scrollAbout" class="h-screen flex justify-center items-center">
-                <div class="flex flex-col items-center w-[60rem] mt-[20rem]">
+                <div class="flex flex-col items-center w-[90%] mt-[20rem] sm:w-2/3">
                     <h2 class="text-white text-[3rem] mb-[3rem]">Über <span class="text-sky-600">mich</span></h2>
                     <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500 mb-[10rem] p-[2rem]">
                         <div class="bg-white/30 w-full h-[1.5rem] absolute top-0 left-0 rounded-t-lg flex items-center pl-[0.5rem]">
@@ -132,8 +132,8 @@
                                 <div class="w-[1rem] h-[1rem] bg-green-500 rounded-full flex justify-center items-center"><Icon name="mingcute:fullscreen-2-fill" size=".75rem" class="text-green-900 opacity-0 group-hover:opacity-100"/></div>                                                                
                             </div>
                         </div>
-                        <div class="grid grid-cols-3 grid-rows-2 gap-[1rem] mt-[1rem] w-full h-96  grid-flow-col">
-                            <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500 grid grid-cols-2 grid-rows-2 p-[1rem] w-full h-full gap-[0.5rem]" v-motion
+                        <div class="grid grid-cols-1 grid-rows-4 gap-[1rem] mt-[1rem] w-full h-full  grid-flow-col sm:grid-rows-2 sm:grid-cols-3">
+                            <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500 grid grid-cols-2 col-span-2 grid-rows-2 p-[1rem] w-full h-full gap-[0.5rem] sm:col-span-1" v-motion
                                 :initial="{opacity: 0,y: 50}"
                                 :visible="{opacity: 1, y:0}"
                             >
@@ -158,7 +158,7 @@
                                 <Skill name="Blender" />     
                                                
                             </div>
-                            <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500 flex flex-row items-center justify-center p-[1rem]" v-motion
+                            <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500 flex flex-row items-center justify-center p-[1rem] col-span-2 sm:col-span-1" v-motion
                                 :initial="{opacity: 0,y: 50}"
                                 :visible="{opacity: 1, y:0, transition:{delay: 100}}"
                             >
@@ -180,19 +180,19 @@
                                 </div>
 
                             </div>
-                            <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500 row-span-2 flex justify-center items-center" v-motion
+                            <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500  flex justify-center items-center p-[0.5rem] sm:pt-[1rem] row-span-1 sm:row-span-2 col-span-2 sm:col-span-1" v-motion
                                 :initial="{opacity: 0,y: 50}"
                                 :visible="{opacity: 1, y:0, transition:{delay: 200}}"
                             >
-                                <img :src="foto" class="rounded-lg h-[22rem] w-[17rem] border border-gray-500" densities="x1 x2" sizes="17rem"/>
+                                <img :src="foto" class="rounded-lg sm:h-[22rem] h-[11rem] sm:w-[17rem] w-[8.5rem] border border-gray-500" densities="x1 x2" sizes="17rem"/>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section ref="scrollProject" class="w-full h-full flex flex-col justify-center items-center mt-[10rem]">
+            <section ref="scrollProject" class="w-full h-full flex flex-col justify-center items-center mt-[40rem] sm:mt-[10rem]">
                 <div class="text-white text-[3rem] mb-[3rem]">Projekte</div>
-                <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500 mb-[10rem] p-[2rem] w-[60%] ">
+                <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500 mb-[10rem] p-[2rem] w-[90%] sm:w-[60%] ">
                     <div class="bg-white/30 w-full h-[1.5rem] absolute top-0 left-0 rounded-t-lg flex items-center pl-[0.5rem]">
                         <div class="grid grid-cols-3 grid-rows-1 gap-[0.5rem] group">
                             <div class="w-[1rem] h-[1rem] bg-red-500 rounded-full flex justify-center items-center"><Icon name="maki:cross" size=".5rem" class="text-red-950 opacity-0 group-hover:opacity-100"/></div>
@@ -200,25 +200,25 @@
                             <div class="w-[1rem] h-[1rem] bg-green-500 rounded-full flex justify-center items-center"><Icon name="mingcute:fullscreen-2-fill" size=".75rem" class="text-green-900 opacity-0 group-hover:opacity-100"/></div>                                                                
                         </div>
                     </div>
-                    <div class="grid grid-cols-3  gap-[1rem] mt-[1rem] w-full h-full grid-flow-dense" v-auto-animate>
-                        <LazyProjekt v-for="project in projects.data" :key="project.id" :project="project" @moreClicked="handleEmit" :class="(childMoreClicked && project.id === childId) ? 'col-span-3 row-span-2' : 'col-span-1 row-span-1' "/>
+                    <div class="grid grid-cols-1 sm:grid-cols-3  gap-[1rem] mt-[1rem] w-full h-full grid-flow-dense" v-auto-animate>
+                        <LazyProjekt v-for="project in projects.data" :key="project.id" :project="project" @moreClicked="handleEmit" :class="(childMoreClicked && project.id === childId) ? 'sm:col-span-3 sm:row-span-2 col-span-1 row-span-3' : 'col-span-1 row-span-1' "/>
                                                                                                   
                     </div>
                 </div>
             </section>
-            <section ref="scrollKontakt" class="h-screen flex flex-col justify-center items-center w-full mt-[10rem] mb-[10rem]">
+            <section ref="scrollKontakt" class="h-screen flex flex-col justify-center items-center w-full mt-[20rem] sm:mt-[10rem] mb-[10rem]">
                 <div class="text-white text-[3rem] mb-[3rem]">Kontakt</div>
                 <div class="flex flex-col w-1/2 mb-[3rem] justify-center items-center">
                     <form ref="form" @submit.prevent="sendEmail">
                         <div class="flex flex-row justify-center items-center">
-                            <input name="name" type="text" placeholder="Name" required class="appearance-none outline-none focus:outline-none focus:ring-0 text-white caret-white w-[20rem] h-[4rem] bg-white/10 rounded-lg pl-[1rem] border border-gray-500 focus:border-sky-500 mr-[0.5rem]"  />
-                            <input name="email" type="email" placeholder="Email" required class="appearance-none outline-none focus:outline-none focus:ring-0 text-white caret-white w-[20rem] h-[4rem] bg-white/10 rounded-lg pl-[1rem] border border-gray-500 focus:border-sky-500" />
+                            <input name="name" type="text" placeholder="Name" required class="appearance-none outline-none focus:outline-none focus:ring-0 text-white caret-white w-[11rem] h-[3rem] sm:w-[20rem] sm:h-[4rem] bg-white/10 rounded-lg pl-[1rem] border border-gray-500 focus:border-sky-500 mr-[0.5rem]"  />
+                            <input name="email" type="email" placeholder="Email" required class="appearance-none outline-none focus:outline-none focus:ring-0 text-white caret-white w-[11rem] h-[3rem] sm:w-[20rem] sm:h-[4rem] bg-white/10 rounded-lg pl-[1rem] border border-gray-500 focus:border-sky-500" />
                         </div>
                         <div class="flex justify-center items-center mt-[0.5rem] ml-[0.5rem]">
-                            <textarea name="message" placeholder="Nachricht" class="appearance-none outline-none focus:outline-none focus:ring-0 text-white caret-white w-[40.5rem] h-[10rem] bg-white/10 rounded-lg pl-[1rem] pt-[1rem] border border-gray-500 focus:border-sky-500 mr-[0.5rem]" required></textarea>
+                            <textarea name="message" placeholder="Nachricht" class="appearance-none outline-none focus:outline-none focus:ring-0 text-white caret-white w-[22.5rem] sm:w-[40.5rem] sm:h-[10rem] bg-white/10 rounded-lg pl-[1rem] pt-[1rem] border border-gray-500 focus:border-sky-500 mr-[0.5rem]" required></textarea>
                         </div>
                         <div class="flex justify-center items-center mt-[0.5rem]">
-                            <button type="submit" class=" w-[40.5rem] h-[4rem] text-center hover:bg-sky-500 rounded-lg hover:text-white text-white/30 bg-white/10 cursor-pointer duration-75 select-none">{{ submit }}</button>
+                            <button type="submit" class=" w-[22.5rem] h-[3rem] sm:w-[40.5rem] sm:h-[4rem] text-center hover:bg-sky-500 rounded-lg hover:text-white text-white/30 bg-white/10 cursor-pointer duration-75 select-none">{{ submit }}</button>
                         </div>
 
                     </form>
