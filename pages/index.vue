@@ -180,7 +180,7 @@
                                 </div>
 
                             </div>
-                            <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500  flex justify-center items-center p-[0.5rem] sm:pt-[1rem] row-span-1 sm:row-span-2 col-span-2 sm:col-span-1" v-motion
+                            <div class="bg-white/10 backdrop-blur rounded-lg border border-gray-500  flex justify-center items-center p-[0.5rem] sm:p-[1rem] row-span-1 sm:row-span-2 col-span-2 sm:col-span-1" v-motion
                                 :initial="{opacity: 0,y: 50}"
                                 :visible="{opacity: 1, y:0, transition:{delay: 200}}"
                             >
